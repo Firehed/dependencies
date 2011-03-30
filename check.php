@@ -10,10 +10,10 @@ function show($ext, $pass = true) {
 	if ($pass === true) $msg = $ok;
 	elseif ($pass === false) $msg = $fail;
 	else $msg = $skip;
-	printf("%-30s%s\n", $ext, $msg);
+	printf("%-59s%s\n", $ext, $msg);
 }
 function label($text) {
-	echo "\n-=[ $text ]=-\n";
+	echo "-=[ $text ]=-\n";
 }
 
 echo "Testing extension reqirements...\n";
@@ -65,7 +65,7 @@ label('Output');
 	show('GZCompress', function_exists('gzcompress'));
 
 
-echo str_repeat('=', 38), "\n";
+echo str_repeat('=', 67), "\n";
 show('Overall', !$errors);
 exit($errors ? 1 : 0);
 
